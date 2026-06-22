@@ -4,7 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { useEffect, useRef, useState } from 'react';
 
 export default function ContactForm({ dict }: { dict: any }) {
-  const { messages, append, isLoading } = useChat();
+  const { messages, append, isLoading, error } = useChat();
   const [text, setText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -74,6 +74,13 @@ export default function ContactForm({ dict }: { dict: any }) {
         {isLoading && (
           <div style={{ alignSelf: 'flex-start', padding: '1rem', borderRadius: '12px', backgroundColor: '#fff', color: '#888', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
             <span className="typing-indicator">{dict.chatbot?.typing || '顧問正在輸入中...'}</span>
+          </div>
+        )}
+        
+        {error && (
+          <div className="chat-message-bubble" style={{ alignSelf: 'center', padding: '1rem', borderRadius: '12px', backgroundColor: '#fee', color: '#c00', marginTop: '1rem', border: '1px solid #fcc', textAlign: 'center' }}>
+            <strong>發生錯誤：</strong><br/>
+            {error.message || '無法連線到 AI 伺服器，請確認 Vercel 後台的 OpenAI 金鑰 (OPENAI_API_KEY) 設定是否正確，並且沒有包含多餘的雙引號。'}
           </div>
         )}
         <div ref={messagesEndRef} />
