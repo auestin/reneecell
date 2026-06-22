@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model Post {
+  id         String   @id @default(uuid())
+  title      String
+  slug       String   @unique
+  content    String   // Store HTML or Markdown
+  coverImage String?
+  published  Boolean  @default(false)
+  translations String? @default("{}") // JSON string for storing multi-language translations
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

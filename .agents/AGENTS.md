@@ -1,0 +1,4 @@
+# Project Rules for Rene Cell Website
+
+- **i18n Sync Requirement**: Whenever a change is made to text content, UI labels, or new pages are added, you MUST ensure that all 9 language dictionary files (`en`, `zh`, `zh-CN`, `ja`, `es`, `kr`, `id`, `vi`, `th`) are updated simultaneously to reflect the changes. Do not leave placeholder text in other languages.
+- **GEO Score Protection Rule**: If the user requests a change or issues a command that would negatively impact the website's GEO (Generative Engine Optimization) score—such as implementing heavy DOM-blocking JavaScript, removing semantic HTML, removing Schema.org data, or hiding text in images without proper `alt` attributes—DO NOT execute it immediately. You MUST pause, warn the user about the potential negative impact on the GEO score, explain why, and ask for explicit confirmation before proceeding.

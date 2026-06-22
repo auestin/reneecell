@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "产品系列",
+    "about": "关于我们",
+    "science": "护肤科技",
+    "contact": "联系我们"
+  },
+  "home": {
+    "title": "顶级保养 极致升华",
+    "subtitle": "透过 Rene Cell 先进的皮肤科学配方，探索青春的科学奥秘。",
+    "cta": "探索系列",
+    "signature": "经典系列",
+    "viewDetails": "查看详情",
+    "productDesc": "进阶赋活配方",
+    "blogTitle": "最新消息 & Blog",
+    "noPosts": "目前尚无文章发布。",
+    "readMore": "阅读全文",
+    "viewAllPosts": "查看更多文章"
+  },
+  "footer": {
+    "subtitle": "顶级保养与化妆品",
+    "desc": "基于先进的皮肤科学。",
+    "explore": "探索",
+    "legal": "法律条款",
+    "privacy": "隐私权政策",
+    "terms": "服务条款"
+  },
+  "chatbot": {
+    "title": "美妆保养顾问",
+    "subtitle": "您的专属脸部保养专家，随时为您解答",
+    "greeting1": "👋 您好！我是美妆保养顾问。",
+    "greeting2": "有任何关于保养、肤质或产品的疑问，欢迎随时问我喔！",
+    "placeholder": "输入您的问题或需求...",
+    "send": "发送",
+    "bookingSuccess": "✨ 已收到您的预约资讯！我们会尽快与您联系。",
+    "typing": "顾问正在输入中..."
+  }
+}

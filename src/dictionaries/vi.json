@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "Sản phẩm",
+    "about": "Về chúng tôi",
+    "science": "Khoa học",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "title": "Chăm sóc da cao cấp Đỉnh cao",
+    "subtitle": "Khám phá khoa học tuổi trẻ với công thức da liễu tiên tiến của Rene Cell.",
+    "cta": "Khám phá bộ sưu tập",
+    "signature": "Bộ sưu tập Đặc trưng",
+    "viewDetails": "Xem Chi Tiết",
+    "productDesc": "Công thức tái tạo tiên tiến",
+    "blogTitle": "Tin Tức Mới Nhất & Blog",
+    "noPosts": "Chưa có bài viết nào.",
+    "readMore": "Xem Thêm",
+    "viewAllPosts": "Xem tất cả bài viết"
+  },
+  "footer": {
+    "subtitle": "Chăm sóc da & Mỹ phẩm Cao cấp",
+    "desc": "Dựa trên khoa học da liễu tiên tiến.",
+    "explore": "Khám phá",
+    "legal": "Pháp lý",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ"
+  },
+  "chatbot": {
+    "title": "Chuyên gia Tư vấn Chăm sóc Da",
+    "subtitle": "Chuyên gia chăm sóc da mặt cá nhân của bạn, sẵn sàng giải đáp thắc mắc",
+    "greeting1": "👋 Xin chào! Tôi là Chuyên gia Tư vấn Chăm sóc Da của bạn.",
+    "greeting2": "Nếu bạn có bất kỳ câu hỏi nào về chăm sóc da, loại da hoặc sản phẩm, đừng ngần ngại hỏi tôi bất cứ lúc nào!",
+    "placeholder": "Nhập câu hỏi hoặc yêu cầu của bạn...",
+    "send": "Gửi",
+    "bookingSuccess": "✨ Chúng tôi đã nhận được thông tin đặt lịch của bạn! Chúng tôi sẽ sớm liên hệ lại.",
+    "typing": "Chuyên gia tư vấn đang nhập..."
+  }
+}

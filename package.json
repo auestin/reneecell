@@ -3,22 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.70",
+    "@ai-sdk/react": "^0.0.52",
+    "@octokit/rest": "^22.0.1",
+    "@prisma/client": "^5.22.0",
+    "ai": "^3.4.33",
+    "axios": "^1.18.0",
+    "bcryptjs": "^3.0.3",
+    "cheerio": "^1.2.0",
     "next": "16.2.9",
+    "next-auth": "^4.24.14",
+    "openai": "^6.44.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-markdown": "^10.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "prisma": "^5.22.0",
     "typescript": "^5"
   }
 }

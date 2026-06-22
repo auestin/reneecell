@@ -1,49 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500;600&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Noble & Elegant Palette */
+  --bg-primary: #fdfcfb;      /* Pearl white */
+  --bg-secondary: #f8f6f0;    /* Soft cream */
+  --text-primary: #2d2d2d;    /* Charcoal */
+  --text-secondary: #6c6c6c;
+  --gold-accent: #d4af37;     /* Champagne Gold */
+  --gold-gradient: linear-gradient(135deg, #f9f0ce 0%, #d4af37 50%, #b8860b 100%);
+  
+  --font-body: 'Inter', 'Shippori Mincho', 'Noto Serif TC', 'Noto Serif KR', sans-serif;
+  --font-heading: 'Playfair Display', 'Shippori Mincho', 'Noto Serif TC', 'Noto Serif KR', serif;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-weight: 300;
+  overflow-x: hidden;
+  /* Soft pearl gradient background */
+  background-image: radial-gradient(circle at top right, rgba(255,255,255,0.8), rgba(248,246,240,1) 50%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover {
+  color: var(--gold-accent);
+}
+
+/* Glassmorphism Panels with Gold touch */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15); /* Soft gold border */
+  border-radius: 4px; /* Sharper corners for elegance */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animations & Interactions */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px 0 rgba(212, 175, 55, 0.08); /* Gold tinted shadow */
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.glow-on-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-on-hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.glow-on-hover:hover::after {
+  opacity: 1;
+}
+
+/* Ghost Button Style */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: 0.8rem 2.5rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold-accent);
+  color: var(--gold-accent);
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Responsive Typography */
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.2em;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }
+
+/* Luxurious Gold Frame for Slider */
+.hero-slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  margin-top: 80px;
+  background: var(--bg-secondary); /* A cream/soft background to contrast the frame */
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+}
+
+.luxurious-gold-frame {
+  position: relative;
+  width: 85vw; /* Make it responsive and scale proportionally */
+  max-width: 1600px; /* Allow it to grow much larger on 24-inch screens */
+  aspect-ratio: 2 / 1; /* Match the 2000x1000 aspect ratio */
+  border-radius: 12px;
+  padding: 8px; /* The inner padding for the double border effect */
+  background: linear-gradient(135deg, #f9f0ce 0%, #d4af37 40%, #8a6a1c 60%, #f9f0ce 100%);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(212, 175, 55, 0.4); /* Outer glow */
+  transition: transform 0.5s ease;
+}
+
+.luxurious-gold-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(212, 175, 55, 0.6); /* Enhanced glow on hover */
+}
+
+/* Adds a glossy highlight effect over the gold border */
+.luxurious-gold-frame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(105deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.6) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.luxurious-gold-frame-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.4); /* Inner shadow for depth */
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .hero-slider-section {
+    padding: 2rem 1rem;
+    margin-top: 150px; /* More margin on mobile because the header stacks vertically and takes more space */
+  }
+  .luxurious-gold-frame {
+    padding: 4px; /* Thinner frame on mobile */
+    border-radius: 8px;
+  }
+  .luxurious-gold-frame::before {
+    border-radius: 8px;
+  }
+  .luxurious-gold-frame-inner {
+    border-radius: 4px;
+  }
+}
+

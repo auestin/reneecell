@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "Products",
+    "about": "About",
+    "science": "Science",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "title": "Premium Skincare Elevated",
+    "subtitle": "Discover the science of youth with Rene Cell's advanced dermatological formulas.",
+    "cta": "Explore Collection",
+    "signature": "Signature Collection",
+    "viewDetails": "View Details",
+    "productDesc": "Advanced regenerating formula",
+    "blogTitle": "Latest News & Blog",
+    "noPosts": "No posts published yet.",
+    "readMore": "Read More",
+    "viewAllPosts": "View All Posts"
+  },
+  "footer": {
+    "subtitle": "Premium Skincare & Cosmetics",
+    "desc": "Based on advanced dermatological science.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "chatbot": {
+    "title": "Skincare Consultant",
+    "subtitle": "Your personal facial care expert, here to answer your questions",
+    "greeting1": "👋 Hello! I am your Skincare Consultant.",
+    "greeting2": "If you have any questions about skincare, skin types, or products, feel free to ask me anytime!",
+    "placeholder": "Enter your question or request...",
+    "send": "Send",
+    "bookingSuccess": "✨ We have received your booking information! We will contact you soon.",
+    "typing": "Consultant is typing..."
+  }
+}

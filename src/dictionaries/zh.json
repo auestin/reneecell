@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "產品系列",
+    "about": "關於我們",
+    "science": "護膚科技",
+    "contact": "聯絡我們"
+  },
+  "home": {
+    "title": "頂級保養 極致昇華",
+    "subtitle": "透過 Rene Cell 先進的皮膚科學配方，探索青春的科學奧秘。",
+    "cta": "探索系列",
+    "signature": "經典系列",
+    "viewDetails": "查看詳情",
+    "productDesc": "進階賦活配方",
+    "blogTitle": "最新消息 & Blog",
+    "noPosts": "目前尚無文章發布。",
+    "readMore": "閱讀全文",
+    "viewAllPosts": "查看更多文章"
+  },
+  "footer": {
+    "subtitle": "頂級保養與化妝品",
+    "desc": "基於先進的皮膚科學。",
+    "explore": "探索",
+    "legal": "法律條款",
+    "privacy": "隱私權政策",
+    "terms": "服務條款"
+  },
+  "chatbot": {
+    "title": "美妝保養顧問",
+    "subtitle": "您的專屬臉部保養專家，隨時為您解答",
+    "greeting1": "👋 您好！我是美妝保養顧問。",
+    "greeting2": "有任何關於保養、膚質或產品的疑問，歡迎隨時問我喔！",
+    "placeholder": "輸入您的問題或需求...",
+    "send": "發送",
+    "bookingSuccess": "✨ 已收到您的預約資訊！我們會盡快與您聯繫。",
+    "typing": "顧問正在輸入中..."
+  }
+}

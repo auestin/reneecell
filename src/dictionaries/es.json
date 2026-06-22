@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "Productos",
+    "about": "Nosotros",
+    "science": "Ciencia",
+    "contact": "Contáctenos"
+  },
+  "home": {
+    "title": "Cuidado de la piel premium elevado",
+    "subtitle": "Descubra la ciencia de la juventud con las fórmulas dermatológicas avanzadas de Rene Cell.",
+    "cta": "Explorar Colección",
+    "signature": "Colección Exclusiva",
+    "viewDetails": "Ver Detalles",
+    "productDesc": "Fórmula regeneradora avanzada",
+    "blogTitle": "Últimas Noticias & Blog",
+    "noPosts": "Aún no hay publicaciones.",
+    "readMore": "Leer Más",
+    "viewAllPosts": "Ver todos los artículos"
+  },
+  "footer": {
+    "subtitle": "Cosméticos y cuidado de la piel premium",
+    "desc": "Basado en ciencia dermatológica avanzada.",
+    "explore": "Explorar",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "chatbot": {
+    "title": "Consultor de Cuidado de la Piel",
+    "subtitle": "Tu experto personal en cuidado facial, aquí para responder a tus preguntas",
+    "greeting1": "👋 ¡Hola! Soy tu Consultor de Cuidado de la Piel.",
+    "greeting2": "Si tienes alguna pregunta sobre el cuidado de la piel, tipos de piel o productos, ¡no dudes en preguntarme en cualquier momento!",
+    "placeholder": "Introduce tu pregunta o solicitud...",
+    "send": "Enviar",
+    "bookingSuccess": "✨ ¡Hemos recibido tu información de reserva! Nos pondremos en contacto contigo pronto.",
+    "typing": "El consultor está escribiendo..."
+  }
+}

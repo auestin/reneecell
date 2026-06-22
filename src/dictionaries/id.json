@@ -1,0 +1,38 @@
+{
+  "header": {
+    "products": "Produk",
+    "about": "Tentang Kami",
+    "science": "Sains",
+    "contact": "Hubungi Kami"
+  },
+  "home": {
+    "title": "Perawatan Kulit Premium Ditingkatkan",
+    "subtitle": "Temukan sains kemudaan dengan formula dermatologis canggih dari Rene Cell.",
+    "cta": "Jelajahi Koleksi",
+    "signature": "Koleksi Khas",
+    "viewDetails": "Lihat Detail",
+    "productDesc": "Formula regenerasi tingkat lanjut",
+    "blogTitle": "Berita Terbaru & Blog",
+    "noPosts": "Belum ada postingan.",
+    "readMore": "Baca Selengkapnya",
+    "viewAllPosts": "Lihat Semua Artikel"
+  },
+  "footer": {
+    "subtitle": "Perawatan Kulit & Kosmetik Premium",
+    "desc": "Berdasarkan sains dermatologis canggih.",
+    "explore": "Jelajahi",
+    "legal": "Legal",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Ketentuan"
+  },
+  "chatbot": {
+    "title": "Konsultan Perawatan Kulit",
+    "subtitle": "Pakar perawatan wajah pribadi Anda, siap menjawab pertanyaan Anda",
+    "greeting1": "👋 Halo! Saya Konsultan Perawatan Kulit Anda.",
+    "greeting2": "Jika Anda memiliki pertanyaan tentang perawatan kulit, jenis kulit, atau produk, jangan ragu untuk bertanya kapan saja!",
+    "placeholder": "Masukkan pertanyaan atau permintaan Anda...",
+    "send": "Kirim",
+    "bookingSuccess": "✨ Kami telah menerima informasi pemesanan Anda! Kami akan segera menghubungi Anda.",
+    "typing": "Konsultan sedang mengetik..."
+  }
+}
