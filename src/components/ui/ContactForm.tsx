@@ -1,17 +1,19 @@
 'use client';
 
-import { useChat } from '@ai-sdk/react';
+import { useChat } from 'ai/react';
 import { useEffect, useRef, useState } from 'react';
 
 export default function ContactForm({ dict }: { dict: any }) {
   const { messages, append, isLoading, error } = useChat();
   const [text, setText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
 
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', height: '600px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', overflow: 'hidden' }}>
@@ -38,7 +40,7 @@ export default function ContactForm({ dict }: { dict: any }) {
           font-family: 'Zen Maru Gothic', 'Nunito', 'TsukuARdGothic-Regular', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
         }
       `}} />
-      <div style={{ flex: 1, padding: '1.5rem', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem', backgroundColor: '#fafafa' }}>
+      <div ref={chatContainerRef} style={{ flex: 1, padding: '1.5rem', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem', backgroundColor: '#fafafa' }}>
         {(messages || []).length === 0 && (
           <div className="chat-message-bubble" style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>
             <p>{dict.chatbot?.greeting1 || '👋 您好！我是美妝保養顧問。'}</p>
@@ -83,7 +85,6 @@ export default function ContactForm({ dict }: { dict: any }) {
             {error.message || '無法連線到 AI 伺服器，請確認 Vercel 後台的 OpenAI 金鑰 (OPENAI_API_KEY) 設定是否正確，並且沒有包含多餘的雙引號。'}
           </div>
         )}
-        <div ref={messagesEndRef} />
       </div>
 
       {/* Input Area */}
