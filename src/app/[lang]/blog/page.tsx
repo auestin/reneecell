@@ -3,9 +3,10 @@ import Image from 'next/image';
 import prisma from '@/lib/prisma';
 import Link from 'next/link';
 
-export default async function BlogListPage({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function BlogListPage({ params }: { params: Promise<{ lang: string }> }) {
   const resolvedParams = await params;
-  const dict = await getDictionary(resolvedParams.lang);
+  const lang = resolvedParams.lang as Locale;
+  const dict = await getDictionary(lang);
 
   const posts = await prisma.post.findMany({
     where: { published: true },

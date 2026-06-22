@@ -4,8 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { useEffect, useRef, useState } from 'react';
 
 export default function ContactForm({ dict }: { dict: any }) {
-  const { messages, append, status } = useChat();
-  const isLoading = status === 'in_progress' || status === 'submitted' || status === 'streaming';
+  const { messages, append, isLoading } = useChat();
   const [text, setText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 

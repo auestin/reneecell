@@ -5,9 +5,10 @@ import HeroSlider from '@/components/ui/HeroSlider';
 import prisma from '@/lib/prisma';
 import Link from 'next/link';
 
-export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const resolvedParams = await params;
-  const dict = await getDictionary(resolvedParams.lang);
+  const lang = resolvedParams.lang as Locale;
+  const dict = await getDictionary(lang);
 
   const latestPosts = await prisma.post.findMany({
     where: { published: true },
